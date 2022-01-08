@@ -15,6 +15,11 @@
                 <div>
                     <img src="img/Logo.png" height="110">
                 </div>
+                <div class="w-100 ms-4">
+                    <div>
+                        <a href="php/about.php">Chi siamo</a>
+                    </div>
+                </div>
                 <div>
                     <a href="login.html">Login</a>
                 </div>
@@ -22,17 +27,37 @@
         </nav>
         <div role="main" class="container">
             <div class="row">
-                <h1>Questo è un post</h1>
-                <p>Qui c'è il testo del post</p>
+                <?php
+                    require_once('php/database.php');
+                    $query = "
+                        SELECT title, content
+                        FROM blog_posts
+                        WHERE id_post = :id_post
+                    ";
+                    
+                    $check = $pdo->prepare($query);
+                    $id = 1;
+                    $check->bindParam(':id_post', $id, PDO::PARAM_INT);
+                    $check->execute();
+                    
+                    $post = $check->fetch(PDO::FETCH_ASSOC);
+
+                    if ($post) {
+                        printf("<h1>%s</h1>", $post['title']) ;
+                        echo $post['content'];                        
+                    } else {
+                        echo "<p><i>nessun contenuto disponibile</i></p>";
+                    }
+                ?>
             </div>
         </div>
         <div class="footer">
             <div class="container">
                 <span class="text-muted">
                     <i class="fa fa-facebook-square"></i>
+                    <i class="ps-2 fa fa-youtube-play"></i>
                     <i class="ps-2 fa fa-instagram"></i>
                     <i class="ps-2 fa fa-twitter-square"></i>
-                    <i class="ps-2 fa fa-youtube-play"></i>
                 </span> 
             </div>
         </div>
