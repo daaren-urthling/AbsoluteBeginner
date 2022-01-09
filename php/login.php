@@ -1,5 +1,6 @@
+<?php require_once('../config.php') ?>
 <?php
-session_start();
+// session_start();
 require_once('database.php');
 
 if (isset($_SESSION['session_id'])) {
@@ -38,5 +39,5 @@ if (isset($_POST['login'])) {
         }
     }
     
-    printf($msg, '<a href="../index.html">torna indietro</a>');
+    printf($msg, '<a href="' . BASE_URL . 'index.php">torna indietro</a>');
 }

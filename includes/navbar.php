@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light">
     <div class="container-fluid">
         <div>
-            <a href="index.php"><img src="img/Logo.png" height="110"></a>
+            <a href="index.php"><img height="110" src="img/Logo.png">
+            </a>
         </div>
         <div class="w-100 ms-4">
             <div>
