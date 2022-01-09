@@ -13,18 +13,17 @@
                     $query = "
                         SELECT title, content
                         FROM blog_posts
-                        WHERE id_post = :id_post
+                        WHERE post_type = :about
                     ";
                     
                     $check = $pdo->prepare($query);
-                    $id = 1;
-                    $check->bindParam(':id_post', $id, PDO::PARAM_INT);
+                    $about = 'about';
+                    $check->bindParam(':about', $about, PDO::PARAM_STR);
                     $check->execute();
                     
                     $post = $check->fetch(PDO::FETCH_ASSOC);
 
                     if ($post) {
-                        printf("<h1>%s</h1>", $post['title']) ;
                         echo $post['content'];                        
                     } else {
                         echo "<p><i>nessun contenuto disponibile</i></p>";
