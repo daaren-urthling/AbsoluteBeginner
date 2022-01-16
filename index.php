@@ -6,7 +6,7 @@
         <title>I Gatti In Cerca d'Autore</title>
     </head>
     <body>
-        <?php require_once(ROOT_PATH . '/utils/show_vars.php') ?>
+        <!-- <?php require_once(ROOT_PATH . '/utils/show_vars.php') ?> -->
         <?php require_once(ROOT_PATH . '/includes/navbar.php') ?>
         <div role="main" class="container">
             <div class="row">
