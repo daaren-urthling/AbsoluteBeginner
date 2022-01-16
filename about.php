@@ -1,3 +1,4 @@
+<?php require_once('config.php') ?>
 <!DOCTYPE HTML>
 <html lang="it-IT">
     <head>
