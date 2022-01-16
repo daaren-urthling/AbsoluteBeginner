@@ -4,7 +4,7 @@ Sandbox for experiments in PHP and Heroku hosting
 ## Heroku
 To push changes to Heroku:
 ```
-git push heroku master
+git push heroku main
 ```
 The local changes has to be committed, at least locally, before.
 
