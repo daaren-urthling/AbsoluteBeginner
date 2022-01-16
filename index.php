@@ -3,7 +3,7 @@
 <html lang="it-IT">
     <head>
         <?php require_once(ROOT . '/includes/head_section.php') ?>
-        <title>I Dilettanti In Cerca d'Autore</title>
+        <title>I Gatti In Cerca d'Autore</title>
     </head>
     <body>
         <?php require_once(ROOT . '/includes/navbar.php') ?>
