@@ -7,6 +7,7 @@
     </head>
     <body>
         <?php require_once(ROOT_PATH . '/includes/navbar.php') ?>
+        <?php echo "root " . ROOT_PATH ?>
         <div role="main" class="container">
             <div class="row">
                 <?php
