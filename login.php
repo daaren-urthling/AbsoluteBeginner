@@ -3,10 +3,10 @@
 <html>
     <head>
         <title>I Dilettanti In Cerca d'Autore - Login</title>
-        <?php require_once(ROOT_PATH . '/includes/head_section.php') ?>
+        <?php require_once(ROOT . '/includes/head_section.php') ?>
     </head>
     <body>
-        <?php require_once(ROOT_PATH . '/includes/navbar.php') ?>
+        <?php require_once(ROOT . '/includes/navbar.php') ?>
         <div role="main" class="container">
             <div class="row">
                 <form class="form mt-3" method="post" action="php/login.php">
@@ -31,6 +31,6 @@
                 </form>
             </div>
         </div>
-        <?php require_once(ROOT_PATH . '/includes/footer.php') ?>
+        <?php require_once(ROOT . '/includes/footer.php') ?>
     </body>
 </html>

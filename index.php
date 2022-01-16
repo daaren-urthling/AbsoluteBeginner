@@ -2,17 +2,15 @@
 <!DOCTYPE HTML>
 <html lang="it-IT">
     <head>
-        <?php require_once(ROOT_PATH . '/includes/head_section.php') ?>
+        <?php require_once(ROOT . '/includes/head_section.php') ?>
         <title>I Dilettanti In Cerca d'Autore</title>
     </head>
     <body>
-        <?php require_once(ROOT_PATH . '/includes/navbar.php') ?>
-        <?php echo "ROOT_PATH " . ROOT_PATH . "</br>" ?>
-        <?php echo "ROOT " . ROOT ?>
+        <?php require_once(ROOT . '/includes/navbar.php') ?>
         <div role="main" class="container">
             <div class="row">
                 <?php
-                    require_once(ROOT_PATH . '/php/database.php');
+                    require_once(ROOT . '/php/database.php');
                     $query = "
                         SELECT title, content
                         FROM blog_posts
@@ -35,6 +33,6 @@
                 ?>
             </div>
         </div>
-        <?php require_once(ROOT_PATH . '/includes/footer.php') ?>
+        <?php require_once(ROOT . '/includes/footer.php') ?>
     </body>
 </html>
