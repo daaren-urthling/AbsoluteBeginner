@@ -1,12 +1,18 @@
 <?php 
 	session_start();
 
-    if(isset($_SERVER['HTTPS'])){
-        $protocol = ($_SERVER['HTTPS'] && $_SERVER['HTTPS'] != "off") ? "https" : "http";
-    }
-    else{
-        $protocol = 'http';
-    }
-	define ('ROOT', realpath(dirname(__FILE__)));
-	define('BASE_URL', "//".$_SERVER['HTTP_HOST'].dirname($_SERVER["REQUEST_URI"].'?')."/");
+	// hosted on Heroku servers
+	if ($_SERVER['DOCUMENT_ROOT'] == "/app") { 
+		define ('ROOT_PATH', $_SERVER['DOCUMENT_ROOT']);
+		define('ROOT_URL', "//".$_SERVER['HTTP_HOST']."/");
+	}
+	// running on localhost 
+	else {
+		define ('ROOT_PATH', realpath(dirname(__FILE__)));
+		define('ROOT_URL', "//" . $_SERVER['HTTP_HOST'] . '/' . pathinfo(ROOT_PATH, PATHINFO_BASENAME) . "/");
+	}
+	// if (!str_ends_with(ROOT_URL, ''))
+	// echo '__FILE__ ' . __FILE__ . "</br>";
+	// echo 'ROOT_PATH ' . ROOT_PATH . "</br>";
+	// define('ROOT_URL', "//".$_SERVER['SERVER_NAME']."/");
 ?>

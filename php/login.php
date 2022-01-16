@@ -39,5 +39,5 @@ if (isset($_POST['login'])) {
         }
     }
     
-    printf($msg, '<a href="' . BASE_URL . 'index.php">torna indietro</a>');
+    printf($msg, '<a href="' . ROOT_URL . 'index.php">torna indietro</a>');
 }

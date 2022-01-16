@@ -12,5 +12,8 @@
         <div>
             <a href="login.php">Login</a>
         </div>
+        <div>
+            <a href="posts/editor.php">Posts</a>
+        </div>
     </div>
 </nav>
