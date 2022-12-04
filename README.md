@@ -35,4 +35,3 @@ The same data can be obtained from the `Config Vars` section in the app dashboar
 ```
 mysql://b7ed82d9cf471d:904b6d15@us-cdbr-east-04.cleardb.com/heroku_916d789ce96685f?reconnect=true
 ```
-test new pc
